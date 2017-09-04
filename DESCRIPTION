@@ -1,4 +1,4 @@
-Package: RCUDANLP
+Package: RCudaNlp
 Type: Package
 Title: R with CUDA on NLP
 Version: 0.1.0

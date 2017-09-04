@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // read_csr
 S4 read_csr(const std::string& path);
-RcppExport SEXP _RCUDANLP_read_csr(SEXP pathSEXP) {
+RcppExport SEXP _RCudaNlp_read_csr(SEXP pathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -18,7 +18,7 @@ END_RCPP
 }
 // normalize_csr
 S4 normalize_csr(S4 dtm);
-RcppExport SEXP _RCUDANLP_normalize_csr(SEXP dtmSEXP) {
+RcppExport SEXP _RCudaNlp_normalize_csr(SEXP dtmSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -29,12 +29,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_RCUDANLP_read_csr", (DL_FUNC) &_RCUDANLP_read_csr, 1},
-    {"_RCUDANLP_normalize_csr", (DL_FUNC) &_RCUDANLP_normalize_csr, 1},
+    {"_RCudaNlp_read_csr", (DL_FUNC) &_RCudaNlp_read_csr, 1},
+    {"_RCudaNlp_normalize_csr", (DL_FUNC) &_RCudaNlp_normalize_csr, 1},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_RCUDANLP(DllInfo *dll) {
+RcppExport void R_init_RCudaNlp(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

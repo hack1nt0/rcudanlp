@@ -2,10 +2,10 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 read_csr <- function(path) {
-    .Call('_RCUDANLP_read_csr', PACKAGE = 'RCUDANLP', path)
+    .Call('_RCudaNlp_read_csr', PACKAGE = 'RCudaNlp', path)
 }
 
 normalize_csr <- function(dtm) {
-    .Call('_RCUDANLP_normalize_csr', PACKAGE = 'RCUDANLP', dtm)
+    .Call('_RCudaNlp_normalize_csr', PACKAGE = 'RCudaNlp', dtm)
 }
 

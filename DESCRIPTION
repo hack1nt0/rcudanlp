@@ -1,0 +1,13 @@
+Package: RCUDANLP
+Type: Package
+Title: R with CUDA on NLP
+Version: 0.1.0
+Author: jealousing@gmail.com
+Maintainer: <jealousing@gmail.com>
+Description: kmeans, gmm
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 0.12.12)
+LinkingTo: Rcpp
+Depends: Matrix

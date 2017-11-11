@@ -5,32 +5,35 @@
 
 using namespace Rcpp;
 
-// read_csr
-S4 read_csr(const std::string& path);
-RcppExport SEXP _RCudaNlp_read_csr(SEXP pathSEXP) {
+// read_dtm
+S4 read_dtm(const std::string& path);
+RcppExport SEXP _RCudaNlp_read_dtm(SEXP pathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const std::string& >::type path(pathSEXP);
-    rcpp_result_gen = Rcpp::wrap(read_csr(path));
+    rcpp_result_gen = Rcpp::wrap(read_dtm(path));
     return rcpp_result_gen;
 END_RCPP
 }
-// normalize_csr
-S4 normalize_csr(S4 dtm);
-RcppExport SEXP _RCudaNlp_normalize_csr(SEXP dtmSEXP) {
+// normalize_dtm
+S4 normalize_dtm(S4 dtm);
+RcppExport SEXP _RCudaNlp_normalize_dtm(SEXP dtmSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< S4 >::type dtm(dtmSEXP);
-    rcpp_result_gen = Rcpp::wrap(normalize_csr(dtm));
+    rcpp_result_gen = Rcpp::wrap(normalize_dtm(dtm));
     return rcpp_result_gen;
 END_RCPP
 }
 
+RcppExport SEXP _rcpp_module_boot_unif_module();
+
 static const R_CallMethodDef CallEntries[] = {
-    {"_RCudaNlp_read_csr", (DL_FUNC) &_RCudaNlp_read_csr, 1},
-    {"_RCudaNlp_normalize_csr", (DL_FUNC) &_RCudaNlp_normalize_csr, 1},
+    {"_RCudaNlp_read_dtm", (DL_FUNC) &_RCudaNlp_read_dtm, 1},
+    {"_RCudaNlp_normalize_dtm", (DL_FUNC) &_RCudaNlp_normalize_dtm, 1},
+    {"_rcpp_module_boot_unif_module", (DL_FUNC) &_rcpp_module_boot_unif_module, 0},
     {NULL, NULL, 0}
 };
 
